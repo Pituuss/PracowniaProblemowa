@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+
+\usepackage{scicite}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{svg}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xparse}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{pdfpages}
+\usepackage{times}
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+
+\newenvironment{sciabstract}{%
+\begin{quote} \bf}
+{\end{quote}}
+
+\renewcommand\refname{References and Notes}
+
+\newcounter{lastnote}
+\newenvironment{scilastnote}{%
+\setcounter{lastnote}{\value{enumiv}}%
+\addtocounter{lastnote}{+1}%
+\begin{list}%
+{\arabic{lastnote}.}
+{\setlength{\leftmargin}{.22in}}
+{\setlength{\labelsep}{.5em}}}
+{\end{list}}
+
+
+% Include your paper's title here
+
+\title{Automatyczna obróbka zdjęć z użyciem uczenia maszynowego} 
+
+\author
+{Aleksander Mikucki, Piotr Wojtyś}
+
+\date{2020}
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+\begin{document} 
+
+% Double-space the manuscript.
+
+\baselineskip24pt
+
+% Make the title.
+
+\maketitle 
+
+
+% Place your abstract within the special {sciabstract} environment.
+
+
+\begin{sciabstract}
+
+abstrakt
+
+\end{sciabstract}
+
+
+\section*{Wstęp}
+
+
+\bibliography{scibib}
+
+
+\bibliographystyle{Science}
+
+
+\end{document}
